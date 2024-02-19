@@ -3,13 +3,13 @@ import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
-import AvatarImage from '../../public/assets/blog/authors/bartosz.jpeg';
+import AvatarImage from '../../public/assets/blog/authors/sudhendra.jpg';
 import { Container } from '../components/Container';
 import { ExternalLink } from '../components/ExternalLink';
 import { PageTitle } from '../components/PageTitle';
 import { Quote } from '../components/Quote';
 import { Section } from '../components/Section';
-import { SocialLink } from '../components/SocialLink';
+import { SocialLink } from '../components/SocialLink';  
 import {
   AboutExtended,
   Blogs,
@@ -59,7 +59,7 @@ export default function AboutMe() {
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
-            <PageTitle>Hi, I&apos;m Bartosz Jarocki.</PageTitle>
+            <PageTitle>Namaste 🙏, I&apos;m Sudhendra Kambhamettu.</PageTitle>
             <div className="mt-6 text-base">{AboutExtended}</div>
             <div className="mt-6 flex gap-6">
               {SocialMedia.map((socialProfile) => (
@@ -73,9 +73,15 @@ export default function AboutMe() {
             </div>
 
             <Section>
-              <Section.Title as="h2">Work</Section.Title>
+              <Section.Title as="h2">Career Perspective 🎓</Section.Title>
               <Section.Content>
-                I&apos;m a software developer with over 13 years of experience. I started as a C/C++
+                I&apos;m an AI Product developer with over 2 years of experience developing products and services. I am currently a Graduate student pursuing MS in Artificial Intelligence @ Northeastern University.
+                I got my start into technology through robotics as a kid and currently my itch is with AI and the potential it carries in bringing about radically revolutionary social ideas. 
+                I toy around with a lofty goal of achieving AGI or to bend it to serve humanity (Super-Alignment) and its role/implication in a modernist and post modernist era. 
+                I've had the pleasure of working with extremely talented people across the world taking on different challenges in AI from creating a completely no-code AI experience, deep techincal research building Universal encoders to working at the 
+                bleeding edge intersection of AI and genomics. <br />
+                <br />Needless to say, many experiences throughout my career have shaped me into who I am and how I think about the world today.
+                {/* I&apos;m a software developer with over 13 years of experience. I started as a C/C++
                 developer, then transitioned to Android world and now I&apos;m mostly focused on
                 developing great user experiences using React.
                 <br />
@@ -112,11 +118,11 @@ export default function AboutMe() {
                   DM me on Twitter
                 </ExternalLink>{' '}
                 or just{' '}
-                <ExternalLink href="mailto:bartosz.jarocki@icloud.com">email me.</ExternalLink>
+                <ExternalLink href="mailto:bartosz.jarocki@icloud.com">email me.</ExternalLink> */}
               </Section.Content>
             </Section>
             <Section>
-              <Section.Title as="h2">Books worth re-reading</Section.Title>
+              <Section.Title as="h2">Research Papers I am reading 📖</Section.Title>
               <Section.Content>
                 <ul className="mt-1 list-disc list-inside">
                   {Books.map((book) => (
@@ -128,7 +134,7 @@ export default function AboutMe() {
               </Section.Content>
             </Section>
             <Section>
-              <Section.Title as="h2">Podcasts I listen to</Section.Title>
+              <Section.Title as="h2">Some Notable Achievements 🏅</Section.Title>
               <Section.Content>
                 <ul className="mt-1 list-disc list-inside">
                   {Podcasts.map((podcast) => (
@@ -139,31 +145,21 @@ export default function AboutMe() {
                 </ul>
               </Section.Content>
             </Section>
+            <MySisyphusDreams />
             <Section>
-              <Section.Title as="h2">Blogs I read</Section.Title>
+              <Section.Title as="h2">Travel</Section.Title>
               <Section.Content>
                 <ul className="mt-1 list-disc list-inside">
-                  {Blogs.map((blog) => (
-                    <li key={blog.name}>
-                      <ExternalLink href={blog.link}>{blog.name}</ExternalLink>
-                    </li>
-                  ))}
-                </ul>
-              </Section.Content>
-            </Section>
-            <Section>
-              <Section.Title as="h2">Videos worth watching</Section.Title>
-              <Section.Content>
-                <ul className="mt-1 list-disc list-inside">
-                  {VideosWorthWatching.map((video) => (
+                  {/* {VideosWorthWatching.map((video) => (
                     <li key={video.name}>
                       <ExternalLink href={video.link}>{video.name}</ExternalLink>
                     </li>
-                  ))}
+                  ))} */}
+                  Incoming...
                 </ul>
               </Section.Content>
             </Section>
-            <Section>
+            {/* <Section>
               <Section.Title as="h2">People with unique perspective I follow</Section.Title>
               <Section.Content>
                 {PeopleWorthFollowingOnTwitter.map<React.ReactNode>((personOnTwitter) => (
@@ -173,8 +169,8 @@ export default function AboutMe() {
                 )).reduce((prev, curr) => [prev, ', ', curr])}
                 .
               </Section.Content>
-            </Section>
-            {randomQuote && (
+            </Section> */}
+            {/* {randomQuote && (
               <Section>
                 <Section.Title as="h2">Quote worth thinking about</Section.Title>
                 <Section.Content>
@@ -183,10 +179,47 @@ export default function AboutMe() {
                   </div>
                 </Section.Content>
               </Section>
-            )}
+            )} */}
           </div>
         </div>
       </Container>
     </>
+  );
+}
+
+function MySisyphusDreams() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <Section>
+      <Section.Title as="h2" onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
+        My Sisyphus Dreams {isOpen ? '▼' : '►'}
+      </Section.Title>
+      <Section.Content>
+        {isOpen && (
+          <div className="mt-1 list-disc list-inside">
+            {Blogs.map((blog, index) => (
+              <div key={blog.name} className="flex items-center">
+                <input
+                  id={`checkbox-${index}`}
+                  type="checkbox"
+                  name={blog.name}
+                  value={blog.link}
+                  className="mr-2"
+                  checked={blog.checked}
+                  disabled // This disables the checkbox
+                />
+                <label htmlFor={`checkbox-${index}`} className="">{blog.name}</label>
+              </div>
+            ))}
+            {/* {Blogs.map((blog) => (
+              <div key={blog.name}>
+                <ExternalLink href={blog.link}>{blog.name}</ExternalLink>
+              </div>
+            ))} */}
+          </div>
+        )}
+      </Section.Content>
+    </Section>
   );
 }

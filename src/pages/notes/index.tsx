@@ -6,9 +6,9 @@ import { PageLayout } from '../../components/PageLayout';
 import { NotePreview } from '../../components/notes/NotePreview';
 import { Note, notesApi } from '../../lib/notesApi';
 
-const seoTitle = 'Notes';
+const seoTitle = 'Blogs';
 const seoDescription =
-  'All of my thoughts on programming, building products, leadership, and more. Not structured.';
+  'Explore my deep dive into Artificial Intelligence, covering theoretical insights, coding adventures, and the latest paradigms. Unstructured explorations from theory to code in AI';
 
 interface Props {
   notes: Note[];
@@ -21,14 +21,14 @@ export default function Notes({ notes, tags }: Props) {
       <NextSeo
         title={seoTitle}
         description={seoDescription}
-        canonical={`${process.env.NEXT_PUBLIC_URL}/notes`}
+        canonical={`${process.env.NEXT_PUBLIC_URL}/blogs`}
         openGraph={{
           images: [{ url: `${process.env.NEXT_PUBLIC_URL}/api/og?title=${seoTitle}` }],
         }}
       />
       <PageLayout
-        title="Notes on software, building products, and other stuff."
-        intro="All of my thoughts on programming, building products, leadership, travelling, whisky, and other random stuff. Not structured."
+        title="Blogs on Artificial Intelligence."
+        intro="All of my thoughts and random exploration into Artificial Intelligence and the paradigms that govern it. You can find me venturing into theoretical depths & code somethimes. Not structured."
       >
         <h3 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">Tags</h3>
         <div className="mt-4 flex max-w-xl flex-wrap gap-1 font-mono">

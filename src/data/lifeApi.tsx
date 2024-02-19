@@ -6,31 +6,30 @@ import AmbitLogo from '../images/logos/ambit.png';
 import BarepapersLogo from '../images/logos/barepapers.svg';
 import BimLogo from '../images/logos/bim.png';
 import CDGOLogo from '../images/logos/cdgo.png';
-import ClevertechLogo from '../images/logos/clevertech.png';
+import NortheasternLogo from '../images/logos/Northeastern.jpg';
 import EvercastLogo from '../images/logos/evercast.svg';
 import Howdy from '../images/logos/howdy.png';
 import JarockiMeLogo from '../images/logos/jarocki.svg';
-import JojoMobileLogo from '../images/logos/jojomobile.png';
+import RapydAILogo from '../images/logos/rapydai.webp';
 import MonitoLogo from '../images/logos/monito.svg';
 import Consultly from '../images/logos/consultly.svg';
 import MobileVikingsLogo from '../images/logos/mv.png';
-import NSNLogo from '../images/logos/nsn.svg';
-import ParabolLogo from '../images/logos/parabol.svg';
+import RoundsqrLogo from '../images/logos/roundsqr.webp';
+import Camp4Logo from '../images/logos/camp4.jpg';
 import TastyCloudLogo from '../images/logos/tastycloud.png';
 import YearProgressLogo from '../images/logos/yearprogress.svg';
 import Minimal from '../images/logos/minimal.svg';
 import { LinkedInIcon } from '../components/icons/LinkedInIcon';
 
-export const Name = 'Bartosz Jarocki';
-
+export const Name = 'Sudhendra Kambhamettu';
+// I used to consider myself a software engineer, but the reality is that I simply enjoy creating things
 export const About = (
   <>
-    {`I used to consider myself a software engineer, but the reality is that I simply enjoy creating things. If you'd like to get in touch,`}{' '}
-    <ExternalLink href="mailto:bartosz@jarocki.me">send me an email.</ExternalLink>
+    {`I merely aim to explore the universe & my re-current muse has become Artificial Intelligence. If you'd like to get in touch,`}{' '}
+    <ExternalLink href="sudhendrakambahmettu@gmail.com">send me an email.</ExternalLink>
   </>
 );
-export const AboutExtended = `I live in Wrocław, Poland, having grown up in the small town of Góra in the western part of the country. I have a bachelor's degree in Control Systems Engineering and Robotics from the Wrocław University of Technology. I like programming, books, plants, mountain biking, whisky, and traveling the world with my wife, Kasia. The cosmos fascinates me, and I take great delight in gazing at the stars.`;
-
+export const AboutExtended = `I am an eternal champion of exploration who embodies a free flow of ideas; set out to build & break things for the fun of it.`
 export type Project = {
   title: string;
   techStack: string[];
@@ -45,13 +44,9 @@ export type Project = {
 export const MyCurrentProjects: Project[] = [
   {
     title: 'Consultly',
-    techStack: ['Side Project', 'TypeScript', 'Next.js', 'WebRTC'],
-    description: 'A platform to build and grow your online business.',
+    techStack: ['Side Project', 'Python', 'React.js', 'NLP', 'LLM'],
+    description: 'AI recommendation platform for E-commerce.',
     logo: Consultly,
-    link: {
-      label: 'consultly.com',
-      href: 'https://consultly.com',
-    },
   },
   {
     title: 'Monito',
@@ -110,7 +105,7 @@ export const MyPastProjects: Project[] = [
     title: 'Parabol',
     techStack: ['Full Stack Developer', 'TypeScript', 'React', 'Node.js', 'GraphQL'],
     description: 'The Agile meeting co-pilot that delivers better meetings with less effort.',
-    logo: ParabolLogo,
+    logo: Camp4Logo,
     link: {
       label: 'github.com',
       href: 'https://github.com/ParabolInc/parabol',
@@ -185,40 +180,40 @@ export const MyPastProjects: Project[] = [
 ];
 
 export const SocialMedia = [
-  { name: 'Twitter', link: 'https://twitter.com/BartoszJarocki', icon: XIcon },
-  { name: 'Instagram', link: 'https://www.instagram.com/bartosz.jarocki/', icon: InstagramIcon },
-  { name: 'Github', link: 'https://github.com/BartoszJarocki', icon: GitHubIcon },
-  { name: 'LinkedIn', link: 'https://www.linkedin.com/in/bjarocki', icon: LinkedInIcon },
+  { name: 'Twitter', link: 'https://x.com/sudhendrakambh3', icon: XIcon },
+  // { name: 'Instagram', link: 'https://www.instagram.com/bartosz.jarocki/', icon: InstagramIcon },
+  { name: 'Github', link: 'https://github.com/SudhendraK', icon: GitHubIcon },
+  { name: 'LinkedIn', link: 'https://www.linkedin.com/in/sudhendrak', icon: LinkedInIcon },
 ] as const;
 
 export const Work = [
   {
-    company: 'Parabol',
-    title: 'Full Stack Developer',
-    logo: ParabolLogo,
-    start: '2021',
-    end: '2024',
+    company: 'Camp4 Therapeutics',
+    title: 'Computational Biology ML R&D',
+    logo: Camp4Logo,
+    start: 'Jul. 2023',
+    end: 'Dec. 2023',
   },
   {
-    company: 'Clevertech',
-    title: 'Lead Android Developer → Full Stack Developer',
-    logo: ClevertechLogo,
-    start: '2015',
-    end: '2021',
+    company: 'Northeastern University',
+    title: 'Research Assistant',
+    logo: NortheasternLogo,
+    start: 'Feb. 2023',
+    end: 'Jul. 2023',
   },
   {
-    company: 'Jojo Mobile',
-    title: 'Android Developer → Lead Android Developer',
-    logo: JojoMobileLogo,
-    start: '2012',
-    end: '2015',
+    company: 'RAPYD.AI Gmbh',
+    title: 'AI Product Developer',
+    logo: RapydAILogo,
+    start: 'Dec. 2020',
+    end: 'Dec. 2021',
   },
   {
-    company: 'Nokia Siemens Networks',
-    title: 'C/C++ Developer',
-    logo: NSNLogo,
-    start: '2010',
-    end: '2012',
+    company: 'RoundSqr',
+    title: 'Computer Vision Developer',
+    logo: RoundsqrLogo,
+    start: 'Jun. 2020',
+    end: 'Aug. 2020',
   },
 ] as const;
 
@@ -247,32 +242,32 @@ export const CompaniesLinks = [
 
 export const Books = [
   {
-    name: 'Shoe Dog: A Memoir by the Creator of Nike by Phil Knight',
-    link: 'https://www.amazon.com/Shoe-Dog-Memoir-Creator-Nike-ebook/dp/B0176M1A44',
+    name: 'Chain-of-Thought Prompting Elicits Reasoning in LLMs',
+    link: 'https://drive.google.com/file/d/1hjPwBC_Vq1WjKs1Jpqzd70Vjd6hWb3lE/view?usp=drive_link',
   },
   {
-    name: 'The Black Swan: The Impact of the Highly Improbable by Nassim Nicholas Taleb',
-    link: 'https://amzn.to/2NwihaS',
+    name: 'Weak-to-String Generalization: Eliciting Strong Capabilities with Weak Supervision',
+    link: 'https://cdn.openai.com/papers/weak-to-strong-generalization.pdf',
   },
   {
-    name: 'Antifragile: Things That Gain from Disorder by Nassim Nicholas Taleb',
-    link: 'https://amzn.to/3aIG805',
+    name: 'The Hardware Lottery',
+    link: 'https://arxiv.org/pdf/2009.06489.pdf',
   },
   {
-    name: 'Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets by Nassim Nicholas Taleb',
-    link: 'https://amzn.to/3kbvaD9',
+    name: 'Evaluating the Zero-shot Robustness of Instruction-tuned Language Models',
+    link: 'https://arxiv.org/pdf/2306.11270.pdf',
   },
   {
-    name: 'Daily stoic by Ryan Holiday',
-    link: 'https://amzn.to/3n8ATuC',
+    name: 'The Future of AI in Space',
+    link: 'https://ieeexplore.ieee.org/abstract/document/1667956',
   },
   {
-    name: 'A Guide to the Good Life: The Ancient Art of Stoic Joy by William B. Irvine',
-    link: 'https://amzn.to/3iuL1ud',
+    name: 'QLoRA: Efficient Finetuning of Quantized LLMs',
+    link: 'https://arxiv.org/pdf/2305.14314.pdf',
   },
   {
-    name: 'Atomic Habits by James Clear',
-    link: 'https://amzn.to/3iqimpZ',
+    name: 'Orca 2: Teaching Small Language Models How to Reason',
+    link: 'https://arxiv.org/pdf/2311.11045.pdf',
   },
 ] as const;
 
@@ -289,24 +284,24 @@ export const VideosWorthWatching = [
 
 export const Podcasts = [
   {
-    name: 'Lex Fridman Podcast',
-    link: 'https://www.youtube.com/@lexfridman',
+    name: '2nd Place @ Reinvent-the-wheel Hackathon',
+    link: 'https://www.linkedin.com/posts/sudhendrak_artficialintelligence-machinelearning-hackathon-activity-6997787097537355776-N6Ij?utm_source=share&utm_medium=member_desktop',
   },
   {
-    name: 'Huberman Lab',
-    link: 'https://www.youtube.com/@hubermanlab',
+    name: "Built 'The Algorithm X' and Failed!",
+    link: 'https://www.thehindu.com/news/national/andhra-pradesh/students-innovation-to-the-fore-at-vit-exhibition/article30053937.ece',
   },
   {
-    name: 'Joe Rogan',
-    link: 'https://www.youtube.com/@joerogan',
+    name: '1st Place in Engineering Clinics @ VIT-AP',
+    link: 'https://www.thehindu.com/news/national/andhra-pradesh/students-innovation-to-the-fore-at-vit-exhibition/article30053937.ece',
   },
   {
-    name: 'The Tim Ferriss Show',
-    link: 'https://www.youtube.com/channel/UCznv7Vf9nBdJYvBagFdAHWw',
+    name: 'Created & Organized - The Mindhack! Summit (1st ever student led free Global AI summit during COVID)',
+    link: 'https://www.youtube.com/@mindhacksummit292/featured',
   },
   {
-    name: 'Build your SaaS',
-    link: 'https://saas.transistor.fm/',
+    name: "Qualified for 'Google Build for India'",
+    link: '',
   },
 ] as const;
 
@@ -359,33 +354,35 @@ export const PeopleWorthFollowingOnTwitter = [
 
 export const Blogs = [
   {
-    name: 'Wait but why',
-    link: 'https://waitbutwhy.com/',
+    name: 'Summit a Himalayn Peak ❄️',
+    link: '',
+    checked: true,
   },
   {
-    name: 'Paul Graham',
-    link: 'http://www.paulgraham.com/',
+    name: 'Run 100km in 2 weeks 🏃‍♀️',
+    link: '',
+    checked: true,
   },
   {
-    name: 'Joel Hooks',
-    link: 'https://joelhooks.com',
+    name: 'Run in snow 🥶',
+    link: '',
+    checked: true,
   },
   {
-    name: 'David Perell',
-    link: 'https://www.perell.com/',
+    name: 'Summit Mt. Everest 🏔️',
+    link: '',
+    checked: false,
   },
   {
-    name: 'Dan Abramov',
-    link: 'https://overreacted.io',
-  },
+    name: 'Finish a sub 4hr Marathon ⏳',
+    link: '',
+    checked: false,
+  },  
   {
-    name: 'Lee Robinson',
-    link: 'https://leerob.io',
-  },
-  {
-    name: 'Naval Ravikant',
-    link: 'https://nav.al/',
-  },
+    name: 'Make a Podcast? 🎧',
+    link: '',
+    checked: false,
+  }, 
 ] as const;
 
 export const Quotes = [

@@ -18,7 +18,7 @@ export default function Note({
   noteContent,
   previousPathname,
 }: Props & { previousPathname: string }) {
-  const url = `${process.env.NEXT_PUBLIC_URL}/notes/${slug}`;
+  const url = `${process.env.NEXT_PUBLIC_URL}/blogs/${slug}`;
   const openGraphImageUrl = `${process.env.NEXT_PUBLIC_URL}/api/og?title=${title}&description=${description}`;
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function Note({
         images={[openGraphImageUrl]}
         title={title}
         datePublished={createdAt}
-        authorName="Bartosz Jarocki"
+        authorName="Sudhendra Kambhamettu"
         description={description}
       />
       <NoteLayout
@@ -60,7 +60,7 @@ export default function Note({
           >
             <h4 className="max-w-lg flex cursor-pointer flex-col duration-200 ease-in-out group-hover:text-primary group-hover:fill-primary fill-white text-wrap">
               <XIcon className="my-6 h-10 w-10 transform transition-transform group-hover:-rotate-12 text-black dark:text-white group-hover:text-primary" />
-              Click here to share this article with your friends on X if you liked it.
+              Click here and spread the holy gospel of AI with your friends on X to be cool. Please?
             </h4>
           </a>
         </div>
